@@ -1,0 +1,189 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+	//variable declarations
+
+	str characterName;
+	str characterClass;
+	int statGen;
+	double strStat;
+	double dexStat;
+	double conStat;
+	double intStat;
+	double wisStat;
+	double chaStat;
+	double strMod;
+	double dexMod;
+	double conMod;
+	double intMod;
+	double wisMod;
+	double chaMod;
+	double atkMod;
+	double aClass;
+
+	//character creation
+
+	cout << "Give your character a name: " \n;
+	cin = characterName;
+	cout << "Select their class: " \n;
+	cin = characterClass;
+
+	cout << "Select a stat generation method, Manual(1) or Random(2): " \n;
+	cin = statGen;
+	
+	//stat assignments
+
+	if (statGen == 1) {
+		cout << "Enter your Strength score: " \n;
+		cin = strStat;
+			if (strStat =< 2) {
+				strStat = 0;
+				cout << "Please enter a valid score." \n;
+				return 39;
+			} else if (strStat => 19) {
+				strStat = 0;
+				cout << "Please enter a valid score." \n;
+				return 39;
+			} else {
+				break;
+			}
+		cout << "Enter your Dexterity score: " \n;
+		cin = dexStat;
+			if (dexStat =< 2) {
+				dexStat = 0;
+				cout << "Please enter a valid score." \n;
+				return 52;
+			} else if (dexStat => 19) {
+				dexStat = 0;
+				cout << "Please enter a valid score." \n;
+				return 52;
+			} else {
+				break;
+			}
+		cout << "Enter your Constitution score: " \n;
+		cin = conStat;
+			if (conStat =< 2) {
+				conStat = 0;
+				cout << "Please enter a valid score." \n;
+				return 65;
+			} else if (conStat => 19) {
+				conStat = 0;
+				cout << "Please enter a valid score." \n;
+				return 65;
+			} else {
+				break;
+			}
+		cout << "Enter your Intelligence score: " \n;
+		cin = intStat;
+			if (intStat =< 2) {
+				intStat = 0;
+				cout << "Please enter a valid score." \n;
+				return 78;
+			} else if (intStat => 19) {
+				intStat = 0;
+				cout << "Please enter a valid score." \n;
+				return 78;
+			} else {
+				break;
+			}
+		cout << "Enter your Wisdom score: " \n;
+		cin = wisStat;
+			if (wisStat =< 2) {
+				wisStat = 0;
+				cout << "Please enter a valid score." \n;
+				return 91;
+			} else if (wisStat => 19) {
+				wisStat = 0;
+				cout << "Please enter a valid score." \n;
+				return 91;
+			} else {
+				break;
+			}
+		cout << "Enter your Charisma score: " \n;
+		cin = chaStat;
+			if (chaStat =< 2) {
+				chaStat = 0;
+				cout << "Please enter a valid score." \n;
+				return 104;
+			} else if (chaStat => 19) {
+				chaStat = 0;
+				cout << "Please enter a valid score." \n;
+				return 104;
+			} else {
+				break;
+			}
+		statGen = 0;
+	} else if (statGen == 2) {
+		strStat = ((rand() % 10) + 1) + ((rand() % 10) + 1)
+			if (strStat =< 2) {
+				return 119;
+			} else if (strStat => 19) {
+				return 119;
+			} else {
+				break;
+			}
+		dexStat = ((rand() % 10) + 1) + ((rand() % 10) + 1);;
+			if (dexStat =< 2) {
+				return 127;
+			} else if (dexStat => 19) {
+				return 127;
+			} else {
+				break;
+			}
+		conStat = ((rand() % 10) + 1) + ((rand() % 10) + 1);
+			if (conStat =< 2) {
+				return 135;
+			} else if (conStat => 19) {
+				return 135;
+			} else {
+				break;
+			}
+		intStat = ((rand() % 10) + 1) + ((rand() % 10) + 1);
+			if (intStat =< 2) {
+				return 143;
+			} else if (intStat => 19) {
+				return 143;
+			} else {
+				break;
+			}
+		wisStat = ((rand() % 10) + 1) + ((rand() % 10) + 1);
+			if (wisStat =< 2) {
+				return 151;
+			} else if (wisStat => 19) {
+				return 151;
+			} else {
+				break;
+			}
+		chaStat = ((rand() % 10) + 1) + ((rand() % 10) + 1);
+			if (chaStat =< 2) {
+				return 159;
+			} else if (chaStat => 19) {
+				return 159;
+			} else {
+				break;
+			}
+	} else {
+		return 33;
+	}		
+
+	strMod = (strStat - 10) / 2;
+	dexMod = (dexStat - 10) / 2;
+	conMod = (conStat - 10) / 2;
+	intMod = (intStat - 10) / 2;
+	wisMod = (wisStat - 10) / 2;
+	chaMod = (chaStat - 10) / 2;
+	aClass = dexMod + 10;
+
+	cout << "Name: " << characterName \n;
+	cout << "Class: " << characterClass \n;
+	cout << "Armor: " << aClass \n;
+	cout << "Str: " << strStat << " (+" << strMod << ")" \n;
+	cout << "Dex: " << dexStat << " (+" << dexMod << ")" \n;
+	cout << "Con: " << conStat << " (+" << conMod << ")" \n;
+	cout << "Int: " << intStat << " (+" << intMod << ")" \n;
+	cout << "Wis: " << wisStat << " (+" << wisMod << ")" \n;
+	cout << "Cha: " << chaStat << " (+" << chaMod << ")" \n;
+
+}
